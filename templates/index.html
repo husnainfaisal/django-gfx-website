@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock title %}
+{% block body %}
+
+<!-- Hero Section -->
+<section class="hero text-center d-flex align-items-center justify-content-center py-5" data-aos="zoom-in">
+  <div>
+    <h1 class="display-4 fw-bold text-uppercase text-light">Designs That Speak</h1>
+    <p class="lead text-danger">Banners, Overlays, Thumbnails & Animations</p>
+  </div>
+</section>
+
+
+<!-- Banners Section -->
+<section class="container my-5" data-aos="fade-up">
+  <h2 class="text-center text-uppercase fw-bold text-danger mb-4">Featured Banners</h2>
+  <div class="row g-4">
+    <div class="col-md-4" data-aos="flip-left">
+      <div class="card shadow">
+        <img src="/static/img/banner/1.jpeg" alt="Banner 1">
+      </div>
+    </div>
+    <div class="col-md-4" data-aos="flip-up">
+      <div class="card shadow">
+        <img src="/static/img/banner/4.jpeg" alt="Banner 2">
+      </div>
+    </div>
+    <div class="col-md-4" data-aos="flip-right">
+      <div class="card shadow">
+        <img src="/static/img/banner/3.jpeg" alt="Banner 3">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Overlays Section -->
+<section class="container my-5" data-aos="fade-up">
+  <h2 class="text-center text-uppercase fw-bold text-danger mb-4">Overlay Gallery</h2>
+  <div class="row g-4">
+    <div class="col-md-4" data-aos="zoom-in">
+      <div class="card shadow">
+        <img src="/static/img/overlay/9.jpeg" alt="Overlay 1">
+      </div>
+    </div>
+    <div class="col-md-4" data-aos="zoom-in">
+      <div class="card shadow">
+        <img src="/static/img/overlay/5.jpeg" alt="Overlay 2">
+      </div>
+    </div>
+    <div class="col-md-4" data-aos="zoom-in">
+      <div class="card shadow">
+        <img src="/static/img/overlay/4.jpeg" alt="Overlay 3">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Thumbnails Section -->
+<section class="container my-5" data-aos="fade-up">
+  <h2 class="text-center text-uppercase fw-bold text-danger mb-4">Thumbnails</h2>
+  <div class="row g-4">
+    <div class="col-md-6" data-aos="fade-right">
+      <div class="card shadow">
+        <img src="/static/img/thumbnails/1.jpeg" alt="Thumbnail 1">
+      </div>
+    </div>
+    <div class="col-md-6" data-aos="fade-left">
+      <div class="card shadow">
+        <img src="/static/img/thumbnails/2.jpeg" alt="Thumbnail 2">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Animations Section -->
+<section class="container my-5" data-aos="fade-up">
+  <h2 class="text-center text-uppercase fw-bold text-danger mb-4">Animations</h2>
+  <div class="row g-4">
+    <div class="col-md-6" data-aos="fade-right">
+      <div class="card shadow">
+        <video class="w-100" controls>
+          <source src="/static/videos/intro/vid9.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="col-md-6" data-aos="fade-left">
+      <div class="card shadow">
+        <video class="w-100" controls>
+          <source src="/static/videos/intro/vid7.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Creative Lottie Animation Section -->
+<section class="container my-5" data-aos="zoom-in-up">
+  <h2 class="text-center text-uppercase fw-bold text-danger mb-4">Your Vision, Our Art</h2>
+  <div class="text-center">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <lottie-player 
+      src="https://assets4.lottiefiles.com/packages/lf20_dmw3t0vg.json"
+      background="transparent"  
+      speed="1"  
+      style="width: 320px; height: 320px;"  
+      loop  
+      autoplay>
+    </lottie-player>
+    <p class="lead mt-3 text-muted fw-semibold">We blend creativity & motion to turn your ideas into visuals that move people.</p>
+  </div>
+</section>
+
+
+
+
+{% endblock body %}

@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% load static %} 
+
+{% block title %}Pricing{% endblock title %}
+
+{% block body %}
+    <div class="container mt-5">
+        <h1 class="text-center fw-bold fst-italic display-4 m-0" style="color: #808080;">Our Pricing Plan</h1>
+        <h2 class="text-center  mb-5 fw-bold fst-italic">Logo price </h2>
+        <div class="pricing-container">
+            <!-- Vector Logo Section -->
+            <div class="pricing-section">
+                <h3>Gaming Logo</h3>
+                <img src="{% static 'img/vector/5.jpeg' %}" alt="gaming Logo">
+                <p class="price">$100</p>
+                <p>Get a high-quality vector logo suitable for all platforms.</p>
+            </div>
+
+            <!-- Mascot Logo Section -->
+            <div class="pricing-section">
+                <h3>Branding Logo</h3>
+                <img src="{% static 'img/blogos/2.jpeg' %}" alt="branding Logo">
+                <p class="price">$70</p>
+                <p>Get a creative mascot logo for branding and social media.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container mt-5">
+        
+        <h1 class="text-center mb-5">Banner price</h1>
+        <div class="pricing-container">
+            <!-- Vector Logo Section -->
+            <div class="pricing-section">
+                <h3>Vector Banner</h3>
+                <img src="{% static 'img/vector/3.jpeg' %}" alt="Vector Logo">
+                <p class="price">$100</p>
+                <p>Get a high-quality vector banner suitable for all platforms.</p>
+            </div>
+
+            <!-- Mascot Logo Section -->
+            <div class="pricing-section">
+                <h3>Mascot Banner</h3>
+                <img src="{% static 'img/mascort/3.jpeg' %}" alt="Mascot Logo">
+                <p class="price">$70</p>
+                <p>Get a creative mascot banner for branding and social media.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-5">Overlay price</h1>
+        <div class="pricing-container">
+            <!-- Vector Logo Section -->
+            <div class="pricing-section">
+                <h3>Static Overlay</h3>
+                <img src="{% static 'img/vector/1.jpeg' %}" alt="Vector Logo">
+                <p class="price">$150</p>
+                <p>Get a high-quality Static Overlay suitable for all platforms.</p>
+            </div>
+    
+            <!-- Mascot Logo Section -->
+            <div class="pricing-section">
+                <h3>Animated Overlay</h3>
+                <video width="320" height="240" controls>
+                    <source src="{% static 'videos/intro/vid11.mp4' %}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="price">$200</p>
+                <p>Get a creative animated overlay for branding and social media.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-5">Animated Intro Outro for youtube</h1>
+        <div class="pricing-container">
+            <!-- Static Overlay Section -->
+            <div class="pricing-section">
+                <h3>Animated intro</h3>
+                <video width="320" height="240" controls>
+                    <source src="{% static 'videos/intro/vid8.mp4' %}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="price">$150</p>
+                <p>Get a high-quality Static Overlay suitable for all platforms.</p>
+            </div>
+    
+            <!-- Animated Overlay Section -->
+            <div class="pricing-section">
+                <h3>Animated Outro</h3>
+                <video width="320" height="240" controls>
+                    <source src="{% static 'videos/intro/vid3.mp4' %}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="price">$200</p>
+                <p>Get a creative animated overlay for branding and social media.</p>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+{% endblock body %}

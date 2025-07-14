@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% block title %}Contact Us{% endblock title %}
+
+{% block body %}
+
+<!-- ✅ Lottie Animation Section -->
+<div class="container mt-4 mb-5 text-center">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <lottie-player 
+        src="https://assets10.lottiefiles.com/packages/lf20_zrqthn6o.json"  
+        background="transparent"  
+        speed="1"  
+        class="mx-auto d-block"
+        style="width: 300px; height: 300px;"  
+        loop  
+        autoplay>
+    </lottie-player>
+    <h2 class="fw-bold fst-italic text-muted mt-3" style="text-decoration: underline;">
+        Connect with us for Custom Design Plans
+    </h2>
+</div>
+
+<!-- ✉️ Contact Form -->
+<div class="container">
+    <h1 class="text-center fw-bold fst-italic display-4 m-0" style="color: #808080;">Contact Information</h1>
+
+    <form method="POST" action="/contactus">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" aria-describedby="nameHelp">
+            <div id="nameHelp" class="form-text">We'll never share your name with anyone else.</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="phone_number" class="form-label">Phone Number</label>
+            <div class="input-group">
+                <select class="form-select" id="country_code" name="country_code" style="width: 10px;">
+                    <option value="+1" selected>+1 USA</option>
+                    <option value="+49">+49 Germany</option>
+                    <option value="+1">+1 Canada</option>
+                    <option value="+44">+44 United Kingdom</option>
+                    <option value="+61">+61 Australia</option>
+                    <option value="+64">+64 New Zealand</option>
+                    <option value="+81">+81 Japan</option>
+                    <option value="+86">+86 China</option>
+                    <option value="+55">+55 Brazil</option>
+                    <option value="+7">+7 Russia</option>
+                    <option value="+82">+82 South Korea</option>
+                    <option value="+52">+52 Mexico</option>
+                    <option value="+27">+27 South Africa</option>
+                    <option value="+31">+31 Netherlands</option>
+                    <option value="+47">+47 Norway</option>
+                    <option value="+45">+45 Denmark</option>
+                    <option value="+46">+46 Sweden</option>
+                    <option value="+41">+41 Switzerland</option>
+                    <option value="+90">+90 Turkey</option>
+                    <option value="+33">+33 France</option>
+                    <option value="+39">+39 Italy</option>
+                    <option value="+92">+92 Pakistan</option>
+                    <option value="+34">+34 Spain</option>
+                    <option value="+81">+81 Japan</option>
+                    <option value="+86">+86 China</option>
+                    <option value="+61">+61 Australia</option>
+                </select>
+                <input type="text" class="form-control" id="phone_number" name="phone_number" aria-describedby="phoneHelp">
+            </div>
+            <div id="phoneHelp" class="form-text">Please enter your phone number, including the country code.</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">Enter your email</label>
+            <input type="email" class="form-control" id="email" name="email">
+        </div>
+
+        <div class="mb-3">
+            <label for="users_need" class="form-label">Your Need</label>
+            <div class="d-flex align-items-center">
+                <select class="form-select" id="users_need" name="users_need" onchange="updateInputField()">
+                    <option value="" disabled selected>Select your need</option>
+                    <option value="Website Logo">Website Logo</option>
+                    <option value="Social Media Logo">Social Media Logo</option>
+                    <option value="Banner">Banner</option>
+                    <option value="Gaming Logo">Gaming Logo</option>
+                    <option value="Gaming Logo">Twitch viewers</option>
+                    <option value="Other Services">Other Services</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+{% endblock body %}
